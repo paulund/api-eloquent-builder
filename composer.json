@@ -1,0 +1,51 @@
+{
+  "name": "paulund/api-query-builder",
+  "description": "API query builder helper for Laravel to automatically apply filters and includes",
+  "keywords": [
+    "paulund",
+    "laravel",
+    "laravel-query-builder",
+    "eloquent"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Paul Underwood",
+      "homepage": "https://paulund.co.uk",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "illuminate/database": "7.*",
+    "illuminate/routing": "7.*",
+    "illuminate/support": "7.*"
+  },
+  "require-dev": {
+    "orchestra/testbench": "5.*",
+    "phpunit/phpunit": "9.*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Paulund\\ApiQueryBuilder\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Paulund\\ApiQueryBuilder\\Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "test": "vendor/bin/phpunit",
+    "test-coverage": "phpunit --coverage-html coverage"
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Paulund\\ApiQueryBuilder\\ServiceProvider"
+      ]
+    }
+  }
+}
